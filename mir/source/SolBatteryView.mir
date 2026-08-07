@@ -1,0 +1,727 @@
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [Activity,1,13,21]; ]
+using Toybox.Activity;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [Lang,2,13,17]; ]
+using Toybox.Lang;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Time,3,13,17]; ]
+using Toybox.Time;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [WatchUi,4,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [System,5,13,19]; ]
+using Toybox.System;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 6; @symbol_usingdef<0> = [Toybox,6,6,12]; @symbol_usingdef<1> = [Graphics,6,13,21]; ]
+using Toybox.Graphics;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 7; @symbol_usingdef<0> = [Toybox,7,6,12]; @symbol_usingdef<1> = [FitContributor,7,13,27]; ]
+using Toybox.FitContributor;
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 9; @symbol_classdef = [SolBatteryView,9,6,20]; @symbol_extends<0> = [WatchUi,9,29,36]; @symbol_extends<1> = [DataField,9,37,46]; ]
+class SolBatteryView extends WatchUi.DataField {
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 11; @position = 16; @symbol_vardef = [mFitField,11,16,25]; ]
+    private
+    var mFitField = null;
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 12; @position = 16; @symbol_vardef = [mCurrentSolar,12,16,29]; ]
+    private
+    var mCurrentSolar = null;
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 13; @position = 16; @symbol_vardef = [mBatteryField,13,16,29]; ]
+    private
+    var mBatteryField = null;
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 14; @position = 16; @symbol_vardef = [mHasSolarSensor,14,16,31]; ]
+    private
+    var mHasSolarSensor = false;
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 16; @symbol_functiondef = [clampPercent,16,13,25]; @symbol_param<0> = [value,16,26,31]; ]
+    function clampPercent(value) {
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_16_33_30_4_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 17 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_8_19_8_if_stmt:
+        %tmp.1 = lgetv %value;
+        symbol [ value %tmp.1 17 12 17 ];
+        %tmp.2 = null;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_8_19_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_8_19_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_27_19_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 18 12 ]
+        %tmp.4 = 0;
+        ret %tmp.4;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_27_19_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_8_19_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_17_8_19_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 21 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_8_23_8_if_stmt:
+        %tmp.5 = lgetv %value;
+        symbol [ value %tmp.5 21 12 17 ];
+        %tmp.6 = 0;
+        %tmp.7 = lt %tmp.5 %tmp.6;
+        bf %tmp.7 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_8_23_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_8_23_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_23_23_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 22 12 ]
+        %tmp.8 = 0;
+        ret %tmp.8;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_23_23_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_8_23_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_21_8_23_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 25 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_8_27_8_if_stmt:
+        %tmp.9 = lgetv %value;
+        symbol [ value %tmp.9 25 12 17 ];
+        %tmp.10 = 100;
+        %tmp.11 = gt %tmp.9 %tmp.10;
+        bf %tmp.11 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_8_27_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_8_27_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_25_27_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 26 12 ]
+        %tmp.12 = 100;
+        ret %tmp.12;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_25_27_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_8_27_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_25_8_27_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 29 8 ]
+        %tmp.13 = lgetv %value;
+        symbol [ value %tmp.13 29 15 20 ];
+        symbol [ toNumber %tmp.14 29 21 29 ];
+        %tmp.14 = getv function %tmp.13 :toNumber;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        ret %tmp.15;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_16_33_30_4_stop:
+    }
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 32; @symbol_functiondef = [initialize,32,13,23]; ]
+    function initialize() as Void {
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_32_26_68_4_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 33 8 ]
+        symbol [ DataField %tmp.2 33 8 17 ];
+        %tmp.2 = getv ? :DataField;
+        symbol [ initialize %tmp.3 33 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 35 8 ]
+        %tmp.4 = self;
+        symbol [ createField %tmp.5 35 20 31 ];
+        %tmp.5 = getv function %tmp.4 :createField;
+        %tmp.6 = "solar_pct";
+        %tmp.7 = 0;
+        symbol [ FitContributor %tmp.8 38 12 26 ];
+        %tmp.8 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_UINT8 %tmp.9 38 27 42 ];
+        %tmp.9 = getv %tmp.8 :DATA_TYPE_UINT8;
+        %tmp.10 = newd 2;
+        %tmp.12 = const :mesgType;
+        symbol [ mesgType %tmp.12 40 17 25 const ];
+        symbol [ FitContributor %tmp.13 40 29 43 ];
+        %tmp.13 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_RECORD %tmp.14 40 44 60 ];
+        %tmp.14 = getv %tmp.13 :MESG_TYPE_RECORD;
+        %tmp.15 = dup %tmp.10;
+        %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+        %tmp.18 = const :units;
+        symbol [ units %tmp.18 41 17 22 const ];
+        %tmp.19 = "%";
+        %tmp.20 = dup %tmp.16;
+        %tmp.21 = aputv %tmp.20 %tmp.18 %tmp.19;
+        %tmp.22 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.7, %tmp.9, %tmp.21);
+        symbol [ mFitField ? 35 8 17 ];
+        putv self :mFitField %tmp.22;
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 45 8 ]
+        %tmp.23 = self;
+        symbol [ createField %tmp.24 45 24 35 ];
+        %tmp.24 = getv function %tmp.23 :createField;
+        %tmp.25 = "battery_pct";
+        %tmp.26 = 1;
+        symbol [ FitContributor %tmp.27 48 12 26 ];
+        %tmp.27 = getm $.Toybox.FitContributor;
+        symbol [ DATA_TYPE_UINT8 %tmp.28 48 27 42 ];
+        %tmp.28 = getv %tmp.27 :DATA_TYPE_UINT8;
+        %tmp.29 = newd 2;
+        %tmp.31 = const :mesgType;
+        symbol [ mesgType %tmp.31 50 17 25 const ];
+        symbol [ FitContributor %tmp.32 50 29 43 ];
+        %tmp.32 = getm $.Toybox.FitContributor;
+        symbol [ MESG_TYPE_RECORD %tmp.33 50 44 60 ];
+        %tmp.33 = getv %tmp.32 :MESG_TYPE_RECORD;
+        %tmp.34 = dup %tmp.29;
+        %tmp.35 = aputv %tmp.34 %tmp.31 %tmp.33;
+        %tmp.37 = const :units;
+        symbol [ units %tmp.37 51 17 22 const ];
+        %tmp.38 = "%";
+        %tmp.39 = dup %tmp.35;
+        %tmp.40 = aputv %tmp.39 %tmp.37 %tmp.38;
+        %tmp.41 = invoke %tmp.23 %tmp.24(%tmp.25, %tmp.26, %tmp.28, %tmp.40);
+        symbol [ mBatteryField ? 45 8 21 ];
+        putv self :mBatteryField %tmp.41;
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 59 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_32_26_68_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_32_26_68_4_stop" ]
+        %stats.1 = local;
+        symbol [ stats %stats.1 59 12 17 ];
+        symbol [ System %tmp.42 59 20 26 ];
+        %tmp.42 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.43 59 27 41 ];
+        %tmp.43 = getv function %tmp.42 :getSystemStats;
+        %tmp.44 = invoke %tmp.42 %tmp.43();
+        lputv %stats.1 %tmp.44;
+        symbol [ stats %stats.1 59 12 17 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 60 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_27_60_55_begin:
+        %tmp.45 = lgetv %stats.1;
+        symbol [ stats %tmp.45 60 27 32 ];
+        %tmp.46 = null;
+        %tmp.47 = ne %tmp.45 %tmp.46;
+        %tmp.48 = dup %tmp.47;
+        bf %tmp.48 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_44_60_55_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_44_60_55_true:
+        %tmp.49 = lgetv %stats.1;
+        symbol [ stats %tmp.49 60 44 49 ];
+        %tmp.50 = as %tmp.49 { (!Null) };
+        %tmp.52 = const :solarIntensity;
+        symbol [ solarIntensity %tmp.52 60 55 69 const ];
+        %tmp.53 = canhazplz %tmp.50 %tmp.52;
+        %tmp.54 = and %tmp.47 %tmp.53;
+        push %tmp.54;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_44_60_55_end:
+        %tmp.55 = phi [%tmp.48 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_27_60_55_begin] [%tmp.54 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_44_60_55_true] [%tmp.55 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_60_44_60_55_end];
+        symbol [ mHasSolarSensor ? 60 8 23 ];
+        putv self :mHasSolarSensor %tmp.55;
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 62 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_8_64_8_if_stmt:
+        symbol [ mFitField %tmp.57 62 12 21 ];
+        %tmp.57 = getv ? :mFitField;
+        %tmp.58 = null;
+        %tmp.59 = ne %tmp.57 %tmp.58;
+        bf %tmp.59 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_8_64_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_8_64_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_31_64_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 63 12 ]
+        symbol [ mFitField %tmp.61 63 12 21 ];
+        %tmp.61 = getv ? :mFitField;
+        %tmp.62 = as %tmp.61 { (!Null) };
+        symbol [ setData %tmp.63 63 22 29 ];
+        %tmp.63 = getv function %tmp.62 :setData;
+        %tmp.64 = 0;
+        invoke %tmp.62 %tmp.63(%tmp.64);
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_31_64_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_8_64_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_62_8_64_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 65 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_8_67_8_if_stmt:
+        symbol [ mBatteryField %tmp.66 65 12 25 ];
+        %tmp.66 = getv ? :mBatteryField;
+        %tmp.67 = null;
+        %tmp.68 = ne %tmp.66 %tmp.67;
+        bf %tmp.68 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_8_67_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_8_67_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_35_67_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 66 12 ]
+        symbol [ mBatteryField %tmp.70 66 12 25 ];
+        %tmp.70 = getv ? :mBatteryField;
+        %tmp.71 = as %tmp.70 { (!Null) };
+        symbol [ setData %tmp.72 66 26 33 ];
+        %tmp.72 = getv function %tmp.71 :setData;
+        %tmp.73 = 0;
+        invoke %tmp.71 %tmp.72(%tmp.73);
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_35_67_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_8_67_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_65_8_67_8_if_end:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_32_26_68_4_stop:
+    }
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 71; @symbol_functiondef = [compute,71,13,20]; @symbol_param<0> = [info,71,21,25]; @symbol_param<0>_type<0> = [Activity,71,29,37]; @symbol_param<0>_type<1> = [Info,71,38,42]; ]
+    function compute(info as Activity.Info) as Void {
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 72 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_stop" ]
+        %stats.1 = local;
+        symbol [ stats %stats.1 72 12 17 ];
+        symbol [ System %tmp.1 72 20 26 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.2 72 27 41 ];
+        %tmp.2 = getv function %tmp.1 :getSystemStats;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %stats.1 %tmp.3;
+        symbol [ stats %stats.1 72 12 17 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 74 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_stop" ]
+        %batteryValue.2 = local;
+        symbol [ batteryValue %batteryValue.2 74 12 24 ];
+        %tmp.4 = 0;
+        lputv %batteryValue.2 %tmp.4;
+        symbol [ batteryValue %batteryValue.2 74 12 24 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 75 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_8_77_8_if_stmt:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_12_75_46_begin:
+        %tmp.5 = lgetv %stats.1;
+        symbol [ stats %tmp.5 75 12 17 ];
+        %tmp.6 = null;
+        %tmp.7 = ne %tmp.5 %tmp.6;
+        bf %tmp.7 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_8_77_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_29_75_46_true:
+        %tmp.8 = lgetv %stats.1;
+        symbol [ stats %tmp.8 75 29 34 ];
+        %tmp.9 = as %tmp.8 { (!Null) };
+        symbol [ battery %tmp.10 75 35 42 ];
+        %tmp.10 = getv %tmp.9 :battery;
+        %tmp.11 = null;
+        %tmp.12 = ne %tmp.10 %tmp.11;
+        push %tmp.12;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_29_75_46_end:
+        %tmp.13 = phi [%tmp.7 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_12_75_46_begin] [%tmp.12 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_29_75_46_true] [%tmp.13 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_29_75_46_end];
+        bf %tmp.13 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_8_77_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_8_77_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_52_77_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 76 12 ]
+        %tmp.14 = self;
+        symbol [ clampPercent %tmp.15 76 27 39 ];
+        %tmp.15 = getv function %tmp.14 :clampPercent;
+        %tmp.16 = lgetv %stats.1;
+        symbol [ stats %tmp.16 76 40 45 ];
+        %tmp.17 = as %tmp.16 { (!Null) };
+        symbol [ battery %tmp.18 76 46 53 ];
+        %tmp.18 = getv %tmp.17 :battery;
+        %tmp.19 = invoke %tmp.14 %tmp.15(%tmp.18);
+        lputv %batteryValue.2 %tmp.19;
+        symbol [ batteryValue %batteryValue.2 76 12 24 ];
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_52_77_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_8_77_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_75_8_77_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 79 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_stop" ]
+        %solarValue.3 = local;
+        symbol [ solarValue %solarValue.3 79 12 22 ];
+        %tmp.20 = 0;
+        lputv %solarValue.3 %tmp.20;
+        symbol [ solarValue %solarValue.3 79 12 22 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 80 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_stmt:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_12_80_82_begin:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_12_80_40_begin:
+        %tmp.21 = lgetv %stats.1;
+        symbol [ stats %tmp.21 80 12 17 ];
+        %tmp.22 = null;
+        %tmp.23 = ne %tmp.21 %tmp.22;
+        bf %tmp.23 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_else_false;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_29_80_40_true:
+        %tmp.24 = lgetv %stats.1;
+        symbol [ stats %tmp.24 80 29 34 ];
+        %tmp.25 = as %tmp.24 { (!Null) };
+        %tmp.27 = const :solarIntensity;
+        symbol [ solarIntensity %tmp.27 80 40 54 const ];
+        %tmp.28 = canhazplz %tmp.25 %tmp.27;
+        push %tmp.28;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_29_80_40_end:
+        %tmp.29 = phi [%tmp.23 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_12_80_40_begin] [%tmp.28 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_29_80_40_true] [%tmp.29 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_29_80_40_end];
+        bf %tmp.29 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_else_false;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_58_80_82_true:
+        %tmp.30 = lgetv %stats.1;
+        symbol [ stats %tmp.30 80 58 63 ];
+        %tmp.31 = as %tmp.30 { (interface { var solarIntensity; }) && (!Null) };
+        symbol [ solarIntensity %tmp.32 80 64 78 ];
+        %tmp.32 = getv %tmp.31 :solarIntensity;
+        %tmp.33 = null;
+        %tmp.34 = ne %tmp.32 %tmp.33;
+        push %tmp.34;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_58_80_82_end:
+        %tmp.35 = phi [%tmp.29 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_12_80_82_begin] [%tmp.34 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_58_80_82_true] [%tmp.35 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_58_80_82_end];
+        bf %tmp.35 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_else_false;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_88_84_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 81 12 ]
+        %tmp.36 = true;
+        symbol [ mHasSolarSensor ? 81 12 27 ];
+        putv self :mHasSolarSensor %tmp.36;
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 82 12 ]
+        %tmp.37 = self;
+        symbol [ clampPercent %tmp.38 82 25 37 ];
+        %tmp.38 = getv function %tmp.37 :clampPercent;
+        %tmp.39 = lgetv %stats.1;
+        symbol [ stats %tmp.39 82 38 43 ];
+        %tmp.40 = as %tmp.39 { (interface { var solarIntensity; }) && (!Null) };
+        symbol [ solarIntensity %tmp.41 82 44 58 ];
+        %tmp.41 = getv %tmp.40 :solarIntensity;
+        %tmp.42 = invoke %tmp.37 %tmp.38(%tmp.41);
+        lputv %solarValue.3 %tmp.42;
+        symbol [ solarValue %solarValue.3 82 12 22 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 83 12 ]
+        %tmp.43 = lgetv %solarValue.3;
+        symbol [ solarValue %tmp.43 83 28 38 ];
+        symbol [ mCurrentSolar ? 83 12 25 ];
+        putv self :mCurrentSolar %tmp.43;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_88_84_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_else_false:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_84_15_87_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 86 12 ]
+        %tmp.44 = null;
+        symbol [ mCurrentSolar ? 86 12 25 ];
+        putv self :mCurrentSolar %tmp.44;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_84_15_87_8_stop:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_80_8_87_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 89 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_8_91_8_if_stmt:
+        symbol [ mFitField %tmp.46 89 12 21 ];
+        %tmp.46 = getv ? :mFitField;
+        %tmp.47 = null;
+        %tmp.48 = ne %tmp.46 %tmp.47;
+        bf %tmp.48 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_8_91_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_8_91_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_31_91_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 90 12 ]
+        symbol [ mFitField %tmp.50 90 12 21 ];
+        %tmp.50 = getv ? :mFitField;
+        %tmp.51 = as %tmp.50 { (!Null) };
+        symbol [ setData %tmp.52 90 22 29 ];
+        %tmp.52 = getv function %tmp.51 :setData;
+        %tmp.53 = lgetv %solarValue.3;
+        symbol [ solarValue %tmp.53 90 30 40 ];
+        invoke %tmp.51 %tmp.52(%tmp.53);
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_31_91_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_8_91_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_89_8_91_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 93 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_8_95_8_if_stmt:
+        symbol [ mBatteryField %tmp.55 93 12 25 ];
+        %tmp.55 = getv ? :mBatteryField;
+        %tmp.56 = null;
+        %tmp.57 = ne %tmp.55 %tmp.56;
+        bf %tmp.57 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_8_95_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_8_95_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_35_95_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 94 12 ]
+        symbol [ mBatteryField %tmp.59 94 12 25 ];
+        %tmp.59 = getv ? :mBatteryField;
+        %tmp.60 = as %tmp.59 { (!Null) };
+        symbol [ setData %tmp.61 94 26 33 ];
+        %tmp.61 = getv function %tmp.60 :setData;
+        %tmp.62 = lgetv %batteryValue.2;
+        symbol [ batteryValue %tmp.62 94 34 46 ];
+        invoke %tmp.60 %tmp.61(%tmp.62);
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_35_95_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_8_95_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_93_8_95_8_if_end:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_71_52_96_4_stop:
+    }
+    [ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 99; @symbol_functiondef = [onUpdate,99,13,21]; @symbol_param<0> = [dc,99,22,24]; ]
+    function onUpdate(dc) {
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 100 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %bgColor.1 = local;
+        symbol [ bgColor %bgColor.1 100 12 19 ];
+        symbol [ Graphics %tmp.1 100 23 31 ];
+        %tmp.1 = getm $.Toybox.Graphics;
+        symbol [ COLOR_WHITE %tmp.2 100 32 43 ];
+        %tmp.2 = getv %tmp.1 :COLOR_WHITE;
+        lputv %bgColor.1 %tmp.2;
+        symbol [ bgColor %bgColor.1 100 12 19 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 101 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %fgColor.2 = local;
+        symbol [ fgColor %fgColor.2 101 12 19 ];
+        symbol [ Graphics %tmp.3 101 23 31 ];
+        %tmp.3 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.4 101 32 43 ];
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        lputv %fgColor.2 %tmp.4;
+        symbol [ fgColor %fgColor.2 101 12 19 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 102 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %subColor.3 = local;
+        symbol [ subColor %subColor.3 102 12 20 ];
+        symbol [ Graphics %tmp.5 102 23 31 ];
+        %tmp.5 = getm $.Toybox.Graphics;
+        symbol [ COLOR_DK_GRAY %tmp.6 102 32 45 ];
+        %tmp.6 = getv %tmp.5 :COLOR_DK_GRAY;
+        lputv %subColor.3 %tmp.6;
+        symbol [ subColor %subColor.3 102 12 20 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 104 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %width.4 = local;
+        symbol [ width %width.4 104 12 17 ];
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 104 21 23 ];
+        symbol [ getWidth %tmp.8 104 24 32 ];
+        %tmp.8 = getv function %tmp.7 :getWidth;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        lputv %width.4 %tmp.9;
+        symbol [ width %width.4 104 12 17 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 105 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %height.5 = local;
+        symbol [ height %height.5 105 12 18 ];
+        %tmp.10 = lgetv %dc;
+        symbol [ dc %tmp.10 105 21 23 ];
+        symbol [ getHeight %tmp.11 105 24 33 ];
+        %tmp.11 = getv function %tmp.10 :getHeight;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        lputv %height.5 %tmp.12;
+        symbol [ height %height.5 105 12 18 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 108 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 108 8 10 ];
+        symbol [ setColor %tmp.14 108 11 19 ];
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.15 = lgetv %bgColor.1;
+        symbol [ bgColor %tmp.15 108 20 27 ];
+        %tmp.16 = lgetv %bgColor.1;
+        symbol [ bgColor %tmp.16 108 29 36 ];
+        invoke %tmp.13 %tmp.14(%tmp.15, %tmp.16);
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 109 8 ]
+        %tmp.17 = lgetv %dc;
+        symbol [ dc %tmp.17 109 8 10 ];
+        symbol [ fillRectangle %tmp.18 109 11 24 ];
+        %tmp.18 = getv function %tmp.17 :fillRectangle;
+        %tmp.19 = 0;
+        %tmp.20 = 0;
+        %tmp.21 = lgetv %width.4;
+        symbol [ width %tmp.21 109 31 36 ];
+        %tmp.22 = lgetv %height.5;
+        symbol [ height %tmp.22 109 38 44 ];
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.21, %tmp.22);
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 112 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %stats.6 = local;
+        symbol [ stats %stats.6 112 12 17 ];
+        symbol [ System %tmp.23 112 20 26 ];
+        %tmp.23 = getm $.Toybox.System;
+        symbol [ getSystemStats %tmp.24 112 27 41 ];
+        %tmp.24 = getv function %tmp.23 :getSystemStats;
+        %tmp.25 = invoke %tmp.23 %tmp.24();
+        lputv %stats.6 %tmp.25;
+        symbol [ stats %stats.6 112 12 17 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 113 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %batteryNum.7 = local;
+        symbol [ batteryNum %batteryNum.7 113 12 22 ];
+        %tmp.26 = 0;
+        lputv %batteryNum.7 %tmp.26;
+        symbol [ batteryNum %batteryNum.7 113 12 22 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 114 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_8_116_8_if_stmt:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_12_114_46_begin:
+        %tmp.27 = lgetv %stats.6;
+        symbol [ stats %tmp.27 114 12 17 ];
+        %tmp.28 = null;
+        %tmp.29 = ne %tmp.27 %tmp.28;
+        bf %tmp.29 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_8_116_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_29_114_46_true:
+        %tmp.30 = lgetv %stats.6;
+        symbol [ stats %tmp.30 114 29 34 ];
+        %tmp.31 = as %tmp.30 { (!Null) };
+        symbol [ battery %tmp.32 114 35 42 ];
+        %tmp.32 = getv %tmp.31 :battery;
+        %tmp.33 = null;
+        %tmp.34 = ne %tmp.32 %tmp.33;
+        push %tmp.34;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_29_114_46_end:
+        %tmp.35 = phi [%tmp.29 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_12_114_46_begin] [%tmp.34 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_29_114_46_true] [%tmp.35 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_29_114_46_end];
+        bf %tmp.35 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_8_116_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_8_116_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_52_116_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 115 12 ]
+        %tmp.36 = self;
+        symbol [ clampPercent %tmp.37 115 25 37 ];
+        %tmp.37 = getv function %tmp.36 :clampPercent;
+        %tmp.38 = lgetv %stats.6;
+        symbol [ stats %tmp.38 115 38 43 ];
+        %tmp.39 = as %tmp.38 { (!Null) };
+        symbol [ battery %tmp.40 115 44 51 ];
+        %tmp.40 = getv %tmp.39 :battery;
+        %tmp.41 = invoke %tmp.36 %tmp.37(%tmp.40);
+        lputv %batteryNum.7 %tmp.41;
+        symbol [ batteryNum %batteryNum.7 115 12 22 ];
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_52_116_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_8_116_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_114_8_116_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 117 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %battery.8 = local;
+        symbol [ battery %battery.8 117 12 19 ];
+        %tmp.42 = lgetv %batteryNum.7;
+        symbol [ batteryNum %tmp.42 117 22 32 ];
+        symbol [ format %tmp.43 117 33 39 ];
+        %tmp.43 = getv function %tmp.42 :format;
+        %tmp.44 = "%d";
+        %tmp.45 = invoke %tmp.42 %tmp.43(%tmp.44);
+        %tmp.46 = "%";
+        %tmp.47 = add %tmp.45 %tmp.46;
+        lputv %battery.8 %tmp.47;
+        symbol [ battery %battery.8 117 12 19 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 119 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %clockTime.9 = local;
+        symbol [ clockTime %clockTime.9 119 12 21 ];
+        symbol [ System %tmp.48 119 24 30 ];
+        %tmp.48 = getm $.Toybox.System;
+        symbol [ getClockTime %tmp.49 119 31 43 ];
+        %tmp.49 = getv function %tmp.48 :getClockTime;
+        %tmp.50 = invoke %tmp.48 %tmp.49();
+        lputv %clockTime.9 %tmp.50;
+        symbol [ clockTime %clockTime.9 119 12 21 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 120 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %timeStr.10 = local;
+        symbol [ timeStr %timeStr.10 120 12 19 ];
+        %tmp.51 = lgetv %clockTime.9;
+        symbol [ clockTime %tmp.51 120 22 31 ];
+        symbol [ hour %tmp.52 120 32 36 ];
+        %tmp.52 = getv %tmp.51 :hour;
+        symbol [ format %tmp.53 120 37 43 ];
+        %tmp.53 = getv function %tmp.52 :format;
+        %tmp.54 = "%02d";
+        %tmp.55 = invoke %tmp.52 %tmp.53(%tmp.54);
+        %tmp.56 = ":";
+        %tmp.57 = add %tmp.55 %tmp.56;
+        %tmp.58 = lgetv %clockTime.9;
+        symbol [ clockTime %tmp.58 120 60 69 ];
+        symbol [ min %tmp.59 120 70 73 ];
+        %tmp.59 = getv %tmp.58 :min;
+        symbol [ format %tmp.60 120 74 80 ];
+        %tmp.60 = getv function %tmp.59 :format;
+        %tmp.61 = "%02d";
+        %tmp.62 = invoke %tmp.59 %tmp.60(%tmp.61);
+        %tmp.63 = add %tmp.57 %tmp.62;
+        lputv %timeStr.10 %tmp.63;
+        symbol [ timeStr %timeStr.10 120 12 19 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 122 8 ]
+        [ "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_start" "F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop" ]
+        %solarStr.11 = local;
+        symbol [ solarStr %solarStr.11 122 12 20 ];
+        %tmp.64 = "--%";
+        lputv %solarStr.11 %tmp.64;
+        symbol [ solarStr %solarStr.11 122 12 20 ];
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 123 8 ]
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_8_125_8_if_stmt:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_12_123_48_begin:
+        symbol [ mHasSolarSensor %tmp.66 123 12 27 ];
+        %tmp.66 = getv ? :mHasSolarSensor;
+        bf %tmp.66 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_8_125_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_31_123_48_true:
+        symbol [ mCurrentSolar %tmp.68 123 31 44 ];
+        %tmp.68 = getv ? :mCurrentSolar;
+        %tmp.69 = null;
+        %tmp.70 = ne %tmp.68 %tmp.69;
+        push %tmp.70;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_31_123_48_end:
+        %tmp.71 = phi [%tmp.66 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_12_123_48_begin] [%tmp.70 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_31_123_48_true] [%tmp.71 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_31_123_48_end];
+        bf %tmp.71 @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_8_125_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_8_125_8_if_true:
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_54_125_8_start:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 124 12 ]
+        symbol [ mCurrentSolar %tmp.73 124 23 36 ];
+        %tmp.73 = getv ? :mCurrentSolar;
+        %tmp.74 = as %tmp.73 { (!Null) };
+        symbol [ format %tmp.75 124 37 43 ];
+        %tmp.75 = getv function %tmp.74 :format;
+        %tmp.76 = "%d";
+        %tmp.77 = invoke %tmp.74 %tmp.75(%tmp.76);
+        %tmp.78 = "%";
+        %tmp.79 = add %tmp.77 %tmp.78;
+        lputv %solarStr.11 %tmp.79;
+        symbol [ solarStr %solarStr.11 124 12 20 ];
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_54_125_8_stop:
+        goto @F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_8_125_8_if_end;
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_123_8_125_8_if_end:
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 128 8 ]
+        %tmp.80 = lgetv %dc;
+        symbol [ dc %tmp.80 128 8 10 ];
+        symbol [ setColor %tmp.81 128 11 19 ];
+        %tmp.81 = getv function %tmp.80 :setColor;
+        %tmp.82 = lgetv %subColor.3;
+        symbol [ subColor %tmp.82 128 20 28 ];
+        symbol [ Graphics %tmp.83 128 30 38 ];
+        %tmp.83 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.84 128 39 56 ];
+        %tmp.84 = getv %tmp.83 :COLOR_TRANSPARENT;
+        invoke %tmp.80 %tmp.81(%tmp.82, %tmp.84);
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 131 8 ]
+        %tmp.85 = lgetv %dc;
+        symbol [ dc %tmp.85 131 8 10 ];
+        symbol [ drawText %tmp.86 131 11 19 ];
+        %tmp.86 = getv function %tmp.85 :drawText;
+        %tmp.87 = 5;
+        %tmp.88 = lgetv %height.5;
+        symbol [ height %tmp.88 133 12 18 ];
+        %tmp.89 = 0.05;
+        %tmp.90 = mul %tmp.88 %tmp.89;
+        symbol [ Graphics %tmp.91 134 12 20 ];
+        %tmp.91 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.92 134 21 32 ];
+        %tmp.92 = getv %tmp.91 :FONT_MEDIUM;
+        %tmp.93 = "B:";
+        %tmp.94 = lgetv %battery.8;
+        symbol [ battery %tmp.94 135 19 26 ];
+        %tmp.95 = add %tmp.93 %tmp.94;
+        symbol [ Graphics %tmp.96 136 12 20 ];
+        %tmp.96 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_LEFT %tmp.97 136 21 38 ];
+        %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_LEFT;
+        invoke %tmp.85 %tmp.86(%tmp.87, %tmp.90, %tmp.92, %tmp.95, %tmp.97);
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 140 8 ]
+        %tmp.98 = lgetv %dc;
+        symbol [ dc %tmp.98 140 8 10 ];
+        symbol [ drawText %tmp.99 140 11 19 ];
+        %tmp.99 = getv function %tmp.98 :drawText;
+        %tmp.100 = lgetv %width.4;
+        symbol [ width %tmp.100 141 12 17 ];
+        %tmp.101 = 5;
+        %tmp.102 = sub %tmp.100 %tmp.101;
+        %tmp.103 = lgetv %height.5;
+        symbol [ height %tmp.103 142 12 18 ];
+        %tmp.104 = 0.05;
+        %tmp.105 = mul %tmp.103 %tmp.104;
+        symbol [ Graphics %tmp.106 143 12 20 ];
+        %tmp.106 = getm $.Toybox.Graphics;
+        symbol [ FONT_MEDIUM %tmp.107 143 21 32 ];
+        %tmp.107 = getv %tmp.106 :FONT_MEDIUM;
+        %tmp.108 = "S:";
+        %tmp.109 = lgetv %solarStr.11;
+        symbol [ solarStr %tmp.109 144 19 27 ];
+        %tmp.110 = add %tmp.108 %tmp.109;
+        symbol [ Graphics %tmp.111 145 12 20 ];
+        %tmp.111 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_RIGHT %tmp.112 145 21 39 ];
+        %tmp.112 = getv %tmp.111 :TEXT_JUSTIFY_RIGHT;
+        invoke %tmp.98 %tmp.99(%tmp.102, %tmp.105, %tmp.107, %tmp.110, %tmp.112);
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 149 8 ]
+        %tmp.113 = lgetv %dc;
+        symbol [ dc %tmp.113 149 8 10 ];
+        symbol [ setColor %tmp.114 149 11 19 ];
+        %tmp.114 = getv function %tmp.113 :setColor;
+        %tmp.115 = lgetv %fgColor.2;
+        symbol [ fgColor %tmp.115 149 20 27 ];
+        symbol [ Graphics %tmp.116 149 29 37 ];
+        %tmp.116 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.117 149 38 55 ];
+        %tmp.117 = getv %tmp.116 :COLOR_TRANSPARENT;
+        invoke %tmp.113 %tmp.114(%tmp.115, %tmp.117);
+[ "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc" 150 8 ]
+        %tmp.118 = lgetv %dc;
+        symbol [ dc %tmp.118 150 8 10 ];
+        symbol [ drawText %tmp.119 150 11 19 ];
+        %tmp.119 = getv function %tmp.118 :drawText;
+        %tmp.120 = lgetv %width.4;
+        symbol [ width %tmp.120 151 12 17 ];
+        %tmp.121 = 2;
+        %tmp.122 = div %tmp.120 %tmp.121;
+        %tmp.123 = lgetv %height.5;
+        symbol [ height %tmp.123 152 12 18 ];
+        %tmp.124 = 0.25;
+        %tmp.125 = mul %tmp.123 %tmp.124;
+        symbol [ Graphics %tmp.126 153 12 20 ];
+        %tmp.126 = getm $.Toybox.Graphics;
+        symbol [ FONT_NUMBER_HOT %tmp.127 153 21 36 ];
+        %tmp.127 = getv %tmp.126 :FONT_NUMBER_HOT;
+        %tmp.128 = lgetv %timeStr.10;
+        symbol [ timeStr %tmp.128 154 12 19 ];
+        symbol [ Graphics %tmp.129 155 12 20 ];
+        %tmp.129 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.130 155 21 40 ];
+        %tmp.130 = getv %tmp.129 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.118 %tmp.119(%tmp.122, %tmp.125, %tmp.127, %tmp.128, %tmp.130);
+F___DEV_Garmin_SolBattery_source_SolBatteryView_mc_99_26_157_4_stop:
+    }
+}
+[ @file = "F:\_DEV\Garmin\SolBattery\source\SolBatteryView.mc"; @line = 1; ]
+<init> {
+}

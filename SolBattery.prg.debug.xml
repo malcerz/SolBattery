@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="F:\_DEV\Garmin\SolBattery\manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="1" lineNum="28" parent="globals" pc="268435457" symbol="getApp"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="1" lineNum="29" parent="globals" pc="268435467" symbol="getApp"/>
+        <entry filename="f:\\_DEV\\Garmin\\SolBattery\\gen\\006-B3843-00\\source\\Rez.mcgen" id="2" lineNum="7" parent="globals/Rez" pc="268435478" symbol="&lt;init&gt;"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="3" lineNum="5" parent="globals/SolBatteryApp" pc="268435498" symbol="&lt;init&gt;"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="4" lineNum="9" parent="globals/SolBatteryView" pc="268435510" symbol="&lt;init&gt;"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="6" lineNum="20" parent="globals/SolBatteryApp" pc="268435522" symbol="getInitialView"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="6" lineNum="22" parent="globals/SolBatteryApp" pc="268435524" symbol="getInitialView"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="7" lineNum="7" parent="globals/SolBatteryApp" pc="268435550" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryApp.mc" id="7" lineNum="8" parent="globals/SolBatteryApp" pc="268435552" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="16" parent="globals/SolBatteryView" pc="268435565" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="17" parent="globals/SolBatteryView" pc="268435567" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="18" parent="globals/SolBatteryView" pc="268435573" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="21" parent="globals/SolBatteryView" pc="268435575" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="22" parent="globals/SolBatteryView" pc="268435582" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="25" parent="globals/SolBatteryView" pc="268435584" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="26" parent="globals/SolBatteryView" pc="268435592" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="9" lineNum="29" parent="globals/SolBatteryView" pc="268435595" symbol="clampPercent"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="71" parent="globals/SolBatteryView" pc="268435603" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="72" parent="globals/SolBatteryView" pc="268435606" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="74" parent="globals/SolBatteryView" pc="268435618" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="75" parent="globals/SolBatteryView" pc="268435621" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="76" parent="globals/SolBatteryView" pc="268435638" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="79" parent="globals/SolBatteryView" pc="268435655" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="80" parent="globals/SolBatteryView" pc="268435658" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="81" parent="globals/SolBatteryView" pc="268435686" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="82" parent="globals/SolBatteryView" pc="268435694" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="83" parent="globals/SolBatteryView" pc="268435711" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="86" parent="globals/SolBatteryView" pc="268435723" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="89" parent="globals/SolBatteryView" pc="268435731" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="90" parent="globals/SolBatteryView" pc="268435740" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="93" parent="globals/SolBatteryView" pc="268435756" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="10" lineNum="94" parent="globals/SolBatteryView" pc="268435765" symbol="compute"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="32" parent="globals/SolBatteryView" pc="268435782" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="33" parent="globals/SolBatteryView" pc="268435785" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="35" parent="globals/SolBatteryView" pc="268435797" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="45" parent="globals/SolBatteryView" pc="268435844" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="59" parent="globals/SolBatteryView" pc="268435892" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="60" parent="globals/SolBatteryView" pc="268435904" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="62" parent="globals/SolBatteryView" pc="268435928" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="63" parent="globals/SolBatteryView" pc="268435937" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="65" parent="globals/SolBatteryView" pc="268435952" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="11" lineNum="66" parent="globals/SolBatteryView" pc="268435961" symbol="initialize"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="99" parent="globals/SolBatteryView" pc="268435977" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="100" parent="globals/SolBatteryView" pc="268435980" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="101" parent="globals/SolBatteryView" pc="268435987" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="102" parent="globals/SolBatteryView" pc="268435990" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="104" parent="globals/SolBatteryView" pc="268435996" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="105" parent="globals/SolBatteryView" pc="268436005" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="108" parent="globals/SolBatteryView" pc="268436014" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="109" parent="globals/SolBatteryView" pc="268436028" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="112" parent="globals/SolBatteryView" pc="268436044" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="113" parent="globals/SolBatteryView" pc="268436056" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="114" parent="globals/SolBatteryView" pc="268436059" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="115" parent="globals/SolBatteryView" pc="268436076" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="117" parent="globals/SolBatteryView" pc="268436093" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="119" parent="globals/SolBatteryView" pc="268436115" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="120" parent="globals/SolBatteryView" pc="268436127" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="122" parent="globals/SolBatteryView" pc="268436174" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="123" parent="globals/SolBatteryView" pc="268436181" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="124" parent="globals/SolBatteryView" pc="268436198" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="128" parent="globals/SolBatteryView" pc="268436224" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="131" parent="globals/SolBatteryView" pc="268436238" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="140" parent="globals/SolBatteryView" pc="268436270" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="149" parent="globals/SolBatteryView" pc="268436304" symbol="onUpdate"/>
+        <entry filename="F:\\_DEV\\Garmin\\SolBattery\\source\\SolBatteryView.mc" id="12" lineNum="150" parent="globals/SolBatteryView" pc="268436318" symbol="onUpdate"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="8389849" symbol="units"/>
+        <entry field="true" id="10" symbol="&lt;globals/SolBatteryView/&lt;&gt;mFitField&gt;"/>
+        <entry field="true" id="8391500" symbol="solarIntensity"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="13" symbol="AppName"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="9" symbol="&lt;globals/SolBatteryView/&lt;&gt;mCurrentSolar&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="11" symbol="&lt;globals/SolBatteryView/&lt;&gt;mHasSolarSensor&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="5" object="true" symbol="SolBatteryApp"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="8" symbol="&lt;globals/SolBatteryView/&lt;&gt;mBatteryField&gt;"/>
+        <entry id="7" method="true" symbol="clampPercent"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="12" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389780" module="true" symbol="FitContributor"/>
+        <entry id="6" object="true" symbol="SolBatteryView"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389847" symbol="mesgType"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435602" name="value" stackId="1" startPc="268435565"/>
+        <entry arg="true" endPc="268435781" name="info" stackId="1" startPc="268435603"/>
+        <entry endPc="268435780" name="stats" stackId="2" startPc="268435606"/>
+        <entry endPc="268435780" name="batteryValue" stackId="3" startPc="268435606"/>
+        <entry endPc="268435780" name="solarValue" stackId="4" startPc="268435606"/>
+        <entry endPc="268435975" name="stats" stackId="1" startPc="268435785"/>
+        <entry arg="true" endPc="268436347" name="dc" stackId="1" startPc="268435977"/>
+        <entry endPc="268436346" name="bgColor" stackId="2" startPc="268435980"/>
+        <entry endPc="268436346" name="fgColor" stackId="3" startPc="268435980"/>
+        <entry endPc="268436346" name="subColor" stackId="4" startPc="268435980"/>
+        <entry endPc="268436346" name="width" stackId="5" startPc="268435980"/>
+        <entry endPc="268436346" name="height" stackId="6" startPc="268435980"/>
+        <entry endPc="268436346" name="stats" stackId="7" startPc="268435980"/>
+        <entry endPc="268436346" name="batteryNum" stackId="8" startPc="268435980"/>
+        <entry endPc="268436346" name="battery" stackId="9" startPc="268435980"/>
+        <entry endPc="268436346" name="clockTime" stackId="10" startPc="268435980"/>
+        <entry endPc="268436346" name="timeStr" stackId="11" startPc="268435980"/>
+        <entry endPc="268436346" name="solarStr" stackId="12" startPc="268435980"/>
+    </localVars>
+    <deviceInfo deviceVersion="e6263c2a80ff43933f83afa71f1f6645dc2cb4a3" partNumber="006-B3843-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="49" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/Rez" offset="116" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/SolBatteryApp" offset="160" parentId="globals" symbolId="SolBatteryApp" type="class"/>
+        <dataEntry label="globals/SolBatteryView" offset="231" parentId="globals" symbolId="SolBatteryView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="338" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="373" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435477" name="getApp" startPc="268435457">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435497" name="&lt;init&gt;" parent="Rez" startPc="268435478">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435509" name="&lt;init&gt;" parent="SolBatteryApp" startPc="268435498">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435521" name="&lt;init&gt;" parent="SolBatteryView" startPc="268435510">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStart" parent="SolBatteryApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435549" name="getInitialView" parent="SolBatteryApp" startPc="268435522">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435564" name="initialize" parent="SolBatteryApp" startPc="268435550">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onStop" parent="SolBatteryApp">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435602" name="clampPercent" parent="SolBatteryView" startPc="268435565">
+            <param id="value"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435781" name="compute" parent="SolBatteryView" startPc="268435603">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435976" name="initialize" parent="SolBatteryView" startPc="268435782">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436347" name="onUpdate" parent="SolBatteryView" startPc="268435977">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
